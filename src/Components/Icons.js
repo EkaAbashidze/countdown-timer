@@ -74,7 +74,7 @@ function Icons() {
         display: flex;
         position: absolute;
         justify-content: center;
-        top: 70%;
+        top: 595px;
         margin: auto;
         column-gap: 32px;
 
