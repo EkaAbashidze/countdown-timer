@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Clock from "./Components/Clock";
+import Icons from "./Components/Icons";
 
 function App() {
+  
+
+  const timerDays = 10;
+  const timerHours = 10;
+  const timerMinutes = 10;
+  const timerSeconds = 10;
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Clock
+        timerDays={timerDays}
+        timerHours={timerHours}
+        timerMinutes={timerMinutes}
+        timerSeconds={timerSeconds}
+      />
+      <Icons />
     </div>
   );
 }
