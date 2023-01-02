@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Clock from "./Components/Clock";
 import Icons from "./Components/Icons";
+import styled from "styled-components";
+import stars from "./images/bg-stars.svg"
 
 const countdownDate = new Date("Feb 10, 2023");
 const now = new Date();
@@ -29,7 +31,7 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <Wrapper>
       <Clock
         timerDays={timerDays}
         timerHours={timerHours}
@@ -37,8 +39,16 @@ function App() {
         timerSeconds={timerSeconds}
       />
       <Icons />
-    </div>
+    </Wrapper>
   );
 }
 
 export default App;
+
+const Wrapper = styled.div`
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(${stars});
+`;
